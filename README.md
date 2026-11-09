@@ -23,3 +23,8 @@ Hosted as a Claude artifact, readings sync privately to the owner's Claude accou
 Opened anywhere else (e.g. GitHub Pages or a local file), it falls back to the browser's localStorage.
 
 Personal data exports (`*.csv`) are git-ignored and should not be committed.
+
+## Android APK
+Every push to `main` builds an APK with GitHub Actions (Capacitor WebView wrapper) and publishes it under **Releases**.
+In the APK, readings are stored on the phone (localStorage); use Settings → Import / Export to move data.
+The signing key in `android-keystore/` is a personal sideload key, so updates install over each other without losing data.
